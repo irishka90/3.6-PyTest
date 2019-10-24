@@ -28,7 +28,9 @@ def test_add_to_basket(browser):
     link = "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/"
     browser.get(link)
     time.sleep(30)
-    # button_add = browser.find_element_by_xpath('//*[@id="add_to_basket_form"]/button')
+    #2 способа найти элемент
+    #1. button_add = browser.find_element_by_xpath('//*[@id="add_to_basket_form"]/button')
+    #2.
     button_add = browser.find_element_by_class_name('btn-add-to-basket')
     button_name = button_add.text
     # Получение языка, используемого  на странице
