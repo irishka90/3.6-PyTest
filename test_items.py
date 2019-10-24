@@ -32,6 +32,11 @@ def test_add_to_basket(browser):
     #1. button_add = browser.find_element_by_xpath('//*[@id="add_to_basket_form"]/button')
     #2.
     button_add = browser.find_element_by_class_name('btn-add-to-basket')
+
+   #2 способа проверить наличие кнопки
+   #1 проверка кнопки на наличие
+    assert button_add, "button is not"
+   #2. проверка наличия кнопки по надписи
     button_name = button_add.text
     # Получение языка, используемого  на странице
     lang = browser.execute_script("return window.navigator.userLanguage || window.navigator.language")
